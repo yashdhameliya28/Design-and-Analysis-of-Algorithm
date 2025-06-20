@@ -2,15 +2,18 @@
 #include<stdlib.h>
 #include<time.h>
 
-void bubbleSort(int arr[], int len){
-    for(int i=0; i<len-1; i++){
-        for(int j=0; j<len-i-1; j++){
-            if(arr[j] > arr[j+1]){
-                int temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
-            }
+void insertionSort(int arr[], int len){
+    int j, current;
+    for(int i=1; i<len; i++){
+        current = arr[i];
+        j = i-1;
+
+        while(j>=0 && current < arr[j]){
+            arr[j+1] = arr[j];
+            j--;
         }
+
+        arr[j+1] = current;
     }
 }
 
@@ -47,7 +50,7 @@ void main(){
         printf("Enter valid number!!!");
         break;
     }
-
++
     printf("Enter array length : ");
     scanf("%d", &len);
 
@@ -57,8 +60,8 @@ void main(){
         fscanf(fp, "%d", &arr[i]);
     }
 
-    start = clock();
-    bubbleSort(arr, len);
+   start = clock();
+    insertionSort(arr, len);
     end = clock();
     printArray(arr, len);
 
