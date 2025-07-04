@@ -50,7 +50,7 @@ void main(){
         printf("Enter valid number!!!");
         break;
     }
-+
+    
     printf("Enter array length : ");
     scanf("%d", &len);
 
