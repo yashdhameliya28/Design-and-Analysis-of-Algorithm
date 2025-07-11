@@ -26,7 +26,7 @@ int main(){
     clock_t start, end;
     int arr[100000];
 
-    fp = fopen("best.txt", "r");
+    fp = fopen("../Case-File/best.txt", "r");
 
     printf("Enter array length: ");
     scanf("%d", &len);

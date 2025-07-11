@@ -35,15 +35,15 @@ void main(){
     switch (userChoice)
     {
     case 1:
-        fp = fopen("best.txt", "r");
+        fp = fopen("../Case-File/best.txt", "r");
         break;
     
     case 2:
-        fp = fopen("worst.txt", "r");
+        fp = fopen("../Case-File/worst.txt", "r");
         break;
 
     case 3:
-        fp = fopen("average.txt", "r");
+        fp = fopen("../Case-File/average.txt", "r");
         break;
     
     default:
